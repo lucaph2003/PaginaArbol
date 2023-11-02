@@ -1,0 +1,18 @@
+Node.js
+MEtodos a utilizar:
+//A nivel de usuario
+login(email, password) --> Key, iduser
+ListarTodos() --> Lista de todos 
+obtenerCabanias() --> Lista de cabanias
+Buscar(Cabania,Nombre) --> Lista de Ovinos
+ObtenerOvino(idOvino) --> Informacion del Ovino
+ObtenerPAdres(idOvino) --> Lista con los padres
+
+//A nivel de cliente:
+ObtenerAnimalesCabania(idCabania) --> Lista de animales de la cabania
+AltaAnimal(nombre,desccorta,desc,fotoperfil,foto1,foto2,foto3,linkVideo,IDPadre,IdMAdre) --> devuelve si esta ok
+ModificarAnimal(nombre,desccorta,desc,fotoperfil,foto1,foto2,foto3,linkVideo,IDPadre,IdMAdre) --> devuelve si esta ok
+BorrarAnimal(idAnimal) --> DEvuelve si esta ok
+
+Controlar que este logueado con localStorage
+

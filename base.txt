@@ -1,0 +1,37 @@
+Tabla de usuarios
+    -ID : Number(10)--unico incremental
+    -Nombre : Varchar(50)
+    -Apellido : Varchar(50)
+    -FechaAlta : DATE
+    -Email : Varchar(50)
+    -Password : Varchar(50)
+    -IdCabania : Number(10) --Foreign key
+    -Codigo : varchar(50)
+
+Tabla de Cabanias
+    -IDCbania: Number(10) --unico incremental
+    -Nombre: Varchar(50)
+
+Tabla de Ovinos:
+    -ID : Number(10) --unico incremental 
+    -Nombre : Number(10)
+    -IdCabania : Varchar(50) --Foreign key
+    -Nacimiento : DATE
+    -Descripcion destacada : Varchar(30)
+    -Descripcion : Varchar(500)
+    -FotoPerfil : blob
+    -Foto1 : blob
+    -Foto2 : blob
+    -Foto3 : blob
+    -LinkVideo : varchar(100)
+
+Tabla Relacion Ovino-Ovino  
+    -IdRealacion : Number(10) --unico incremental
+    -ID Ovino: Number(10) --Foreign key
+    -ID Padre : Number(10)
+    -ID MAdre : Number(10)
+
+Tabla de historico de arboles creados
+    -ID creacion : Number(10) --unico incremental
+    -Id usuario: Number(10)
+    -Fecha : Date
