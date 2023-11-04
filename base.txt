@@ -36,7 +36,7 @@ Tabla de historico de arboles creados
 
 consultas a la base de datos:
 login --> usuario --> Buscar por email y password --> codigo y el id 
-obtenerNombre --> Cabanias --> Buscar por id --> Traer el nombre
+obtenerNombre --> Cabanias --> Buscar por id --> Traer el nombre -- Lo usamos dentro del login
 ListarTodos --> Ovinos --> Trae todas las ovejas de todas las cabanias
 obtenerCabanias --> Cabanias --> Listar todas las cabanias
 Buscar --> Ovino --> Buscar por el idCabania y nombre de ovino (con LIke) --> Devuelve una lista de Ovinos

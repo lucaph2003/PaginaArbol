@@ -1,15 +1,15 @@
 import { Router } from "express";
-import {deleteOvino,findOvino,getDatosOvino,getOvinoByCabania,getOvinoById,getOvinos,getParents,postOvino,putOvino} from '../controllers/ovinos.controller.js'
+import {deleteOvino,findOvino,getOvinoByCabania,getOvinoById,getOvinos,getParents,postOvino,putOvino} from '../controllers/ovinos.controller.js'
 
 const router = Router();
-router.delete('/Ovino',deleteOvino);
-router.get('/findOvino',findOvino);
-router.get('/getOvino',getDatosOvino);
-router.get('/getOvinoByCabania',getOvinoByCabania);
-router.get('/getOvinoById',getOvinoById);
-router.get('/Ovino',getOvinos);
-router.get('/getParents',getParents);
-router.post('/Ovino',postOvino);
-router.put('/Ovino',putOvino);
+router.get('/findOvino',findOvino); //pronto
+router.get('/getOvino',getOvinoById); //pronto
+router.get('/getOvinoByCabania',getOvinoByCabania); //pronto
+router.get('/getOvinoById',getOvinoById); //pronto
+router.get('/getParents',getParents); //pronto
+router.get('/Ovino',getOvinos); //protno
+router.post('/Ovino',postOvino); //pronto
+router.put('/Ovino',putOvino); //pronto
+router.delete('/Ovino',deleteOvino); //pront
 
 export default router;

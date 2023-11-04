@@ -6,10 +6,11 @@ import usuariosRoutes from './routes/usuarios.routes.js'
 
 const app = express();
 
+app.use(express.json());
+
 app.use(indexRoutes);
 app.use(cabaniasRoutes);
 app.use(ovinosRoutes);
 app.use(usuariosRoutes);
-
 
 app.listen(3000);

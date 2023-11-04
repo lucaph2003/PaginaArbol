@@ -1,0 +1,59 @@
+*{
+    margin: auto;
+    padding:0%;
+}
+
+#span-titulo{
+    color: skyblue;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: azure;
+}
+
+.formulario{
+
+    width: 85%;
+    grid-template-columns: 2fr;
+    column-gap: 2em;
+    display: grid;
+    justify-content: center;
+}
+
+#Div_Contenedor_Dos{
+
+    width: 85%;
+    grid-template-columns: 2fr;
+    column-gap: 2em;
+    display: grid;
+    justify-content: center;
+    
+
+}
+
+div{
+    border: 1px solid black;
+}
+
+footer{
+    display: grid;
+    justify-content: center;
+}
+
+.Ventana-Inicial{
+    width: 85%;
+    grid-template-columns: 2fr;
+    column-gap: 2em;
+    display: grid;
+    justify-content: center;
+    border: 1px solid black;
+}
+
+.Contenedor_Usuario{
+     width: 85%;
+    grid-template-columns: 2fr;
+    column-gap: 2em;
+    display: grid;
+    justify-content: center;
+}
