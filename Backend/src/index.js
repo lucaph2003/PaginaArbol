@@ -1,10 +1,15 @@
 import express from 'express';
-import employeesRoutes from './routes/employees.routes.js'
 import indexRoutes from './routes/index.routes.js'
+import cabaniasRoutes from './routes/cabanias.routes.js'
+import ovinosRoutes from './routes/ovinos.routes.js'
+import usuariosRoutes from './routes/usuarios.routes.js'
 
 const app = express();
 
 app.use(indexRoutes);
-app.use(employeesRoutes);
+app.use(cabaniasRoutes);
+app.use(ovinosRoutes);
+app.use(usuariosRoutes);
+
 
 app.listen(3000);

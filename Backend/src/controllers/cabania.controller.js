@@ -1,0 +1,1 @@
+export const getCabanias = (req,res) => res.send('Obteniendo Cabanias...');

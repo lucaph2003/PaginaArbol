@@ -1,11 +1,11 @@
 Tareas de Alex:
-    -Maquetacion completa HTML con id y clases
-    -Fuente Roboto traida de google
-    -Estilos basicos margin 0, colores de fondo , imagenes para poner de fondo
     -Creacionde base de datos y de tablas
     -Creacion de constraints para las tablas        
     -Creaciond e consultas
-    -Creacion de estructura basica de HTML
+
+    -Maquetacion completa HTML con id y clases
+    -Fuente Roboto traida de google
+    -Estilos basicos margin 0, colores de fondo , imagenes para poner de fondo
     -Aniadir eventos escuchadores de botones
     -HAcer funcion de login
     -HAcer funcion de registro de animal  

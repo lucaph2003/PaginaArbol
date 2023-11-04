@@ -12,7 +12,11 @@ ObtenerPAdres(idOvino) --> Lista con los padres
 ObtenerAnimalesCabania(idCabania) --> Lista de animales de la cabania
 AltaAnimal(nombre,desccorta,desc,fotoperfil,foto1,foto2,foto3,linkVideo,IDPadre,IdMAdre) --> devuelve si esta ok
 ModificarAnimal(nombre,desccorta,desc,fotoperfil,foto1,foto2,foto3,linkVideo,IDPadre,IdMAdre) --> devuelve si esta ok
-BorrarAnimal(idAnimal) --> DEvuelve si esta ok
+BorrarAnimal(idAnimal) --> DEvuelve si esta ok\
+TraerDatosOvinoPAraModificar(idOvino) --> devuelve un objeto ovino
 
 Controlar que este logueado con localStorage
+
+
+
 

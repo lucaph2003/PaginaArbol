@@ -1,37 +1,50 @@
 Tabla de usuarios
-    -ID : Number(10)--unico incremental
+    -ID : int(10)--pk incremental
     -Nombre : Varchar(50)
     -Apellido : Varchar(50)
     -FechaAlta : DATE
     -Email : Varchar(50)
     -Password : Varchar(50)
-    -IdCabania : Number(10) --Foreign key
+    -IdCabania : int(10) --Foreign key
     -Codigo : varchar(50)
 
 Tabla de Cabanias
-    -IDCbania: Number(10) --unico incremental
+    -IDCbania: int(10) --pk incremental
     -Nombre: Varchar(50)
 
 Tabla de Ovinos:
-    -ID : Number(10) --unico incremental 
-    -Nombre : Number(10)
-    -IdCabania : Varchar(50) --Foreign key
+    -ID : int(10) --pk incremental 
+    -Nombre : int(10)
+    -IdCabania : int(50) --Foreign key
     -Nacimiento : DATE
     -Descripcion destacada : Varchar(30)
     -Descripcion : Varchar(500)
     -FotoPerfil : blob
+    -Sexo : int(1) -- Constraint check (1,2) -- 1-MAcho 2-Hembra
     -Foto1 : blob
     -Foto2 : blob
     -Foto3 : blob
     -LinkVideo : varchar(100)
-
-Tabla Relacion Ovino-Ovino  
-    -IdRealacion : Number(10) --unico incremental
-    -ID Ovino: Number(10) --Foreign key
     -ID Padre : Number(10)
     -ID MAdre : Number(10)
 
 Tabla de historico de arboles creados
-    -ID creacion : Number(10) --unico incremental
+    -ID  : int (10) --unico incremental
     -Id usuario: Number(10)
     -Fecha : Date
+
+
+consultas a la base de datos:
+login --> usuario --> Buscar por email y password --> codigo y el id 
+obtenerNombre --> Cabanias --> Buscar por id --> Traer el nombre
+ListarTodos --> Ovinos --> Trae todas las ovejas de todas las cabanias
+obtenerCabanias --> Cabanias --> Listar todas las cabanias
+Buscar --> Ovino --> Buscar por el idCabania y nombre de ovino (con LIke) --> Devuelve una lista de Ovinos
+ObtenerOvino --> Ovino --> Busca por el id --> devuelve un ovino
+ObtenerPadres --> Ovino --> Busca por el id del ovino padre y despues otra consulta con el id ovino madre--> devuelve una con el padre y otra con la madre
+
+ObtenerAnimalesCabania --> Ovino --> Busca por id cabania --> Lista de animales con ese id
+AltaAnimal --> Ovino --> Insert
+Modificar Animal --> Ovino --> Update
+Borrar Animaml --> Ovino --> Borra por el idde Ovino
+TraerDatosOvinoPAraModificar --> Ovino --> Trae un objeto ovino
