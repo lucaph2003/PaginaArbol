@@ -11,6 +11,10 @@ header{
     background-color: rgb(230, 230, 249);
 }
 
+.TituloInicial{
+    font-weight: bold;
+}
+
 .contenedor{
     text-align: center;
     background-color: white;
@@ -77,17 +81,34 @@ header{
 
 .Titulo_Bienvenida{
     margin: auto;
+    text-shadow: 8px 4px 5px black;
+    transition: text-shadow 1s;
+}
+
+.Titulo_Bienvenida:hover{
+    cursor: pointer;
+    text-shadow: 2px 2px 15px white;
 }
 
 .div_Titulo_BienvenisCliente{
-    background-color:#3943B7 ;
     border-radius: 5px;
     color: white;
     align-items: center;
+    display: grid;
+    
 }
 
+
 .contenedor_inicial{
-    background-image: url("../img/backgroung.png");
-    
+    background-image:  linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("../img/backgroung.png");
+    height: 700px;
+    background-size: cover;
+    background-position: center bottom;
+    box-shadow: 2px 2px 10px blue;
 }
 
