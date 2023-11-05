@@ -1,59 +1,93 @@
 *{
     margin: auto;
-    padding:0%;
-}
-
-#span-titulo{
-    color: skyblue;
+    font-family: 'Roboto Flex', sans-serif;
 }
 
 body{
-    font-family: 'Roboto', sans-serif;
-    background-color: azure;
+    background-color: black;
+}
+
+header{
+    background-color: rgb(230, 230, 249);
+}
+
+.contenedor{
+    text-align: center;
+    background-color: white;
+}
+
+.span-titulo{
+    color: skyblue;
 }
 
 .formulario{
-
-    width: 85%;
-    grid-template-columns: 2fr;
-    column-gap: 2em;
+    grid-template-columns: 1fr;
     display: grid;
-    justify-content: center;
 }
 
 #Div_Contenedor_Dos{
-
-    width: 85%;
-    grid-template-columns: 2fr;
-    column-gap: 2em;
     display: grid;
+}
+
+.table_link{
+    text-decoration: none;
+}
+
+.table_link:hover{
+    opacity: 0.5;
+}
+
+.table_link:active{
+    opacity: 0.2;
+}
+
+.contenedores-grid{
+    display: grid;
+    grid-template-columns: 0.8fr;
     justify-content: center;
+    row-gap: 1em;
+}
+
+#Div_Contenedor_Seis_Informacion p{
+    text-align: start;
+}
+
+.titulo_h3{
+    font-weight: bolder;
+    margin: auto;
+}
+
+.divMap_arbol_componente{
+    border: 1.5px solid black;
+}
+
+.divMap_arbol_componente p {
+    font-weight: bold;
+    margin: auto;
+}
+
+.divMap_arbol_componente img {
+    width: 150px;
+}
+
+.divMap_arbol:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.Titulo_Bienvenida{
+    margin: auto;
+}
+
+.div_Titulo_BienvenisCliente{
+    background-color:#3943B7 ;
+    border-radius: 5px;
+    color: white;
+    align-items: center;
+}
+
+.contenedor_inicial{
+    background-image: url("../img/backgroung.png");
     
-
 }
 
-div{
-    border: 1px solid black;
-}
-
-footer{
-    display: grid;
-    justify-content: center;
-}
-
-.Ventana-Inicial{
-    width: 85%;
-    grid-template-columns: 2fr;
-    column-gap: 2em;
-    display: grid;
-    justify-content: center;
-    border: 1px solid black;
-}
-
-.Contenedor_Usuario{
-     width: 85%;
-    grid-template-columns: 2fr;
-    column-gap: 2em;
-    display: grid;
-    justify-content: center;
-}

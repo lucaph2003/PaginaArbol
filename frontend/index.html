@@ -4,59 +4,225 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="js/main.js"></script>
+
+    <script src="js/Clases.js"></script>
+
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-tree.css">
 
     <!--Bootsrapp-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
+    <!--FUENTES-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Genes<span id="span-titulo">UY</span></h1>
+    <header class="container-fluid contenedor py-3 mb-3">
+        <h1 class="TituloInicial">Genes<span class="span-titulo">UY</span></h1>
     </header>    
                                   
-   
-   
-    <div id="Div_Contenedor_Uno"> 
+    <div id="Div_Contenedor_Uno" class="contenedor mb-3 container"> 
+        <h2>Login</h2>
+        <form action="#" method="get" class="formulario form">
+            <input type="text" placeholder="Ingrese email" id="inpEmail" class="form-control mt-3"/>
+            <input type="password" placeholder="Ingrese password" id="inpPassword" class="form-control mt-3"/>
+            <input type="button" value="Iniciar Sesion" id="btnLoguin" class="btn my-3 btn-primary" />
+            <div class="alert alert-success my-3" role="alert">
+                Iniciaste Sesion correctamente
+            </div>
+        </form>
+    </div>
+    
+     <div id="Div_Contenedor_Dos" class="container contenedor mb-3">
+        <h2>Bienvenido <span id="span_NombreAdministrador"></span></h2>
+        <input type="button" value="Buscar Animales en Arbol" id="btnBuscarAnimal" class="btn btn-success m-3 boton"/>
+        <input type="button" value="Ver mis animales ingresados" id="btnVerAnimalesIngresados" class="btn btn-success m-3"/>
+        <input type="button" value="Agregar a animal" id="btnAgregarAnimal" class="btn btn-success m-3"/>
+     </div>
 
-         <H1>Login</H1>
-            <form action="#" method="post" class="formulario">
-                <input type="text" placeholder="Ingrese email" id="inpEmail"/>
-                <input type="text" placeholder="Ingrese password" id="inpPassword" />
-                <input type="button" value="Loguearme" id="btnLoguearme" />
-            </form>
-   
+     <div id="Div_Contenedor_Tres" class="contenedor container py-3">
+       <h2>Ver arboles</h2>
+       <table class="table table-striped table-hover">
+            <thead>
+                <tr >
+                    <th class="col-12">Nombre</th>
+                    <th>Arbol</th>
+                    <th>Ver</th>
+                    <th>Modificar</th>
+                    <th>Eliminar</th>
+                </tr>
+            </thead>
+            <tbody id="table_administrador">
+                <tr>
+                    <td>Luca</td>
+                    <td><a href="#" class="table_link">&#127795;</a></td>
+                    <td><a href="#" class="table_link">🔎</a></td>
+                    <td><a href="#" class="table_link">&#128203;</a></td>
+                    <td><a href="#" class="table_link">🗑️</a></td>
+                </tr>
+                <tr>
+                    <td>Alex</td>
+                    <td><a href="#" class="table_link">&#127795;</a></td>
+                    <td><a href="#" class="table_link">🔎</a></td>
+                    <td><a href="#" class="table_link">&#128203;</a></td>
+                    <td><a href="#" class="table_link">🗑️</a></td>
+                </tr>
+                <tr>
+                    <td>Mozart</td>
+                    <td><a href="#" class="table_link">&#127795;</a></td>
+                    <td><a href="#" class="table_link">🔎</a></td>
+                    <td><a href="#" class="table_link">&#128203;</a></td>
+                    <td><a href="#" class="table_link">🗑️</a></td>
+                </tr>
+            </tbody>
+       </table>
+     </div>
+
+     
+    <div id="Div_Contenedor_Cuatro" class="contenedor contenedores-grid container my-3 p-2">    
+        <select class="form-select" id="Select_Cabanias_Buscador" name="Select_Cabanias_Buscador">
+            <option value="Cabania1">Villa Olivar</option>
+            <option value="Cabania2">Don Amilcar</option>
+        </select>
+        <input type="text" placeholder="Nombre Animal" id="inpNombreAnimal" class="form-control"/>
+        <input type="button" value="Buscar Animal" class="btn btn-success">
+        <div>
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr >
+                        <th class="col-12">Nombre</th>
+                        <th>Arbol</th>
+                        <th>Ver</th>
+                        <th>Modificar</th>
+                        <th>Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody id="table_administrador">
+                    <tr>
+                        <td>Lari</td>
+                        <td><a href="#" class="table_link">&#127795;</a></td>
+                        <td><a href="#" class="table_link">🔎</a></td>
+                        <td><a href="#" class="table_link">&#128203;</a></td>
+                        <td><a href="#" class="table_link">🗑️</a></td>
+                    </tr>
+                    <tr>
+                        <td>Lewry</td>
+                        <td><a href="#" class="table_link">&#127795;</a></td>
+                        <td><a href="#" class="table_link">🔎</a></td>
+                        <td><a href="#" class="table_link">&#128203;</a></td>
+                        <td><a href="#" class="table_link">🗑️</a></td>
+                    </tr>
+                    <tr>
+                        <td>Lala</td>
+                        <td><a href="#" class="table_link">&#127795;</a></td>
+                        <td><a href="#" class="table_link">🔎</a></td>
+                        <td><a href="#" class="table_link">&#128203;</a></td>
+                        <td><a href="#" class="table_link">🗑️</a></td>
+                    </tr>
+                </tbody>
+           </table>
+        </div>
+    </div>
+
+    <div id="Div_Contenedor_Cinco" class="contenedor contenedores-grid container my-3 p-2"> 
+        <div class="Div_Contenedor_Seis_Imagen py-2">
+            <img src="./img/img1.png.jpg" alt="oveja" class="img-thumbnail img-fluid" id="img_Informacion">
+        </div>
+        <div id="Div_Contenedor_Seis_Informacion">
+            <h2>OVEJA PI 256</h2>
+            <p class="card-text">
+                <b>➽Cabania:</b> VILLA OLIVAR<br>
+                <b>➽Fecha de nacimiento:</b> 12/12/2012 <br>
+                <b>➽Descripcion destacada: </b> Campeona copa piston <br>
+                <b>➽Descripcion: </b>Es una Oveja que rompe bien los huevos y se come todo el pasto que hay en el campo , llena d epulgas y con alta baranda a guiso con ajo 
+
+            </p>
+        </div>   
+        <input type="button" value="Ver galeria" class="btn btn-success">
+        <input type="button" value="Ver Arbol" class="btn btn-success">
+    </div>
+
+    <!--Alta-->
+    <div id="Div_Contenedor_Seis" class="contenedor contenedores-grid container my-3 p-2">
+        <h2>Alta Ovino</h2>
+        <form action="#" method="get" class="formulario form">
+            <input type="text" placeholder="Nombre" id="inpNombre" class="form-control mt-3"/>
+            <input type="text" placeholder="Descripcion destacada" id="inpDescripcionDestacada" class="form-control mt-3">
+            <input type="text" placeholder="Descripcion" id="inpDescripcion" class="form-control mt-3">
+            <input type="date" id="inpFecha" class="form-control mt-3">
+            <label for="Select_Cabanias_Alta" class="col-sm-12 col-form-label">Selecciona Cabaña: </label>
+            <select class="form-select" id="Select_Cabanias_Alta" name="Select_Cabanias_Alta">
+                <option value="Cabania1">Villa Olivar</option>
+                <option value="Cabania2">Don Amilcar</option>
+            </select>
+            <label for="inpFotoPerfil" class="col-sm-12 col-form-label">Foto Perfil: </label>
+            <input type="file" id="inpFotoPerfil" class="form-control" >
+            <label for="inpFoto1" class="col-sm-12 col-form-label">Otras Fotos: </label>
+            <input type="file" id="inpFoto1" class="form-control mb-3" >
+            <input type="file" id="inpFoto2" class="form-control mb-3" >
+            <input type="file" id="inpFoto3" class="form-control" >
+            <label for="inpVideoURL" class="col-sm-12 col-form-label">Link video: </label>
+            <input type="text" placeholder="https://youtube.com/asa..." id="inpVideoURL" class="form-control">
+            <label for="Select_Padre_Ovino" class="col-sm-12 col-form-label">Selecciona Padre: </label>
+            <select class="form-select" id="Select_Padre_Ovino" name="Select_Padre_Ovino">
+                <option value="Cabania1">DA 179</option>
+                <option value="Cabania2">VO 300</option>
+            </select>
+            <label for="Select_Madre_Ovino" class="col-sm-12 col-form-label">Selecciona Madre: </label>
+            <select class="form-select" id="Select_Madre_Ovino" name="Select_Madre_Ovino">
+                <option value="Cabania1">200</option>
+                <option value="Cabania2">121</option>
+            </select>
+            <input type="button" value="Registrar" id="btnRegistro" class="btn my-3 btn-primary" />
+            
+            <div class="alert alert-success my-3" role="alert">
+                Alta Correctamente
+            </div>
+        </form>
+    </div>
+
+    <!--Arbol-->
+    <div id="Div_Contenedor_Siete" class="contenedor contenedores-grid container my-3 p-2">
+        <h2>Arbol de <span class="text-primary">Nombre</span></h2>
+        <div id="Id_Arbol_Definitivo">
+
+
+            <div class="divMap_arbol">
+                <div class="divMap_arbol_componente">
+                    <img src="img/img1.png.jpg" alt="" class="img-thumbnail">
+                </div>
+                <div class="divMap_arbol_componente">
+                    <h3 class="titulo_h3">VO 256</h3>
+                </div>
+                <div class="divMap_arbol_componente">
+                    <p class="text-primary">
+                        Campeona copa piston
+                    </p>
+                </div>
+            </div>
+
+
+        </div>
         
     </div>
     
-     <div id="Div_Contenedor_Dos">
-        <h2>Bienvenidos al party mucho bellaqueo</h2>
 
-        <input type="button" value="Buscar Animales en Arbol" id="btnBuscarAnimal" />
-        <input type="button" value="Ver mis animales ingresados" id="btnVerAnimalesIngresados" />
-        <input type="button" value="Agregar a animal" id="btnAgregarAnimal" />
-
-     </div>
-
-     <div id="Div_Contenedor_Tres">
-       <h3>Ver arboles</h3>
-
-     
-
-     </div>
-
-
-
-    <footer>
-
-
+    <div id="Div_Contenedor_Ocho" class="contenedor_inicial contenedores-grid container-fluid my-5 p-2">
+        <div class="div_Titulo_BienvenisCliente p-1"> 
+            <h2 class="Titulo_Bienvenida">Bienvenido a GENES<span class="span-titulo">UY</span></h2>
+        </div>
         
+    </div>
 
-        <h4>Soft devs Uy Derechos Reservados 2023</h4>      
-        <link rel="https://acortar.link/gDCXxd" href="Contacto via mail">    
-        <input type="button" value="Nuestras redes sociales">
+    <!-- Footer-->
+    <footer class="bg-light py-5">
+        <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2023 - Softuy Devs</div></div>
     </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/display.js"></script>
 </body>
 </html>
