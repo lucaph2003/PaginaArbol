@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Genes UY</title>
+
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
 
     <script src="js/Clases.js"></script>
 
@@ -19,44 +21,76 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <header class="container-fluid contenedor py-3">
+    <header class="container-fluid contenedor py-3" id="headerpage">
         <h1 class="TituloInicial">Genes<span class="span-titulo">UY</span></h1>
     </header>    
 
+    <!--Nav-->
+    <nav id="nav_principal" class="navbar navbar-expand  justify-content-center">
+        <div class="container-fluid">
+            <!-- Links -->
+            <ul class="navbar-nav" id="Lista_Nav_desordenada">
+              <li class="nav-item px-2">
+                <span class="nav-link nav_item_Prin" id="Nav_Inicio_btn">Inicio</span>
+              </li>
+              <li class="nav-item px-2">
+                <span class="nav-link nav_item_Prin" id="Nav_Buscar_btn">Buscar Ovinos</span>
+              </li>
+              <li class="nav-item px-2">
+                <span class="nav-link nav_item_Prin" id="Nav_InicioSesion_btn">Iniciar Sesion</span>
+              </li>
+            </ul>
+          </div>
+    </nav>
+
+    <!--Interfaz inicial-->
     <div id="Div_Contenedor_Ocho" class="contenedor_inicial contenedores-grid container-fluid  p-2">
+        
         <div class="div_Titulo_BienvenisCliente p-1"> 
             <h2 class="Titulo_Bienvenida mb-1">Bienvenido a GENES<span class="span-titulo">UY</span></h2>
-            <input type="button" value="Explorar Arboles" class="btn btn-success">
+            <input type="button" value="Explorar Arboles" class="btn btn-success" id="btn_InicioUsuario">
         </div>
         
     </div>
-                                  
+
+    <!--Boton para ionterfaz para ir a iniciar sesion-->
+    <div id="Div_Contenedor_Nueve" class="contenedor contenedores-grid container-fluid  p-2">
+        <h3 class=" my-5 text-dark mb-0">Eres Criador?</h3>
+        <input type="button" value="Inicia Sesion" class="btn btn-primary mb-5" id="btn_InicioUsuario_Login">
+    </div>
+       
+    <!--Login-->
     <div id="Div_Contenedor_Uno" class="contenedor mb-3 container"> 
         <h2>Login</h2>
         <form action="#" method="get" class="formulario form">
             <input type="text" placeholder="Ingrese email" id="inpEmail" class="form-control mt-3"/>
             <input type="password" placeholder="Ingrese password" id="inpPassword" class="form-control mt-3"/>
-            <input type="button" value="Iniciar Sesion" id="btnLoguin" class="btn my-3 btn-primary" />
-            <div class="alert alert-success my-3" role="alert">
-                Iniciaste Sesion correctamente
+            <input type="button" value="Iniciar Sesion" id="btnLogin" class="btn my-3 btn-primary" />
+            <div id="pMensajeLogin">
+                <p class="alert alert-success my-3" role="alert" >
+                    Iniciaste Sesion correctamente
+                </p>
             </div>
         </form>
     </div>
     
+    <!--Interfaz Usuario-->
      <div id="Div_Contenedor_Dos" class="container contenedor mb-3">
         <h2>Bienvenido <span id="span_NombreAdministrador"></span></h2>
-        <input type="button" value="Buscar Animales en Arbol" id="btnBuscarAnimal" class="btn btn-success m-3 boton"/>
-        <input type="button" value="Ver mis animales ingresados" id="btnVerAnimalesIngresados" class="btn btn-success m-3"/>
-        <input type="button" value="Agregar a animal" id="btnAgregarAnimal" class="btn btn-success m-3"/>
+        <input type="button" value="Buscar Animales en Arbol" id="btnBuscarAnimal_usuario" class="btn btn-success m-3 boton"/>
+        <input type="button" value="Ver mis animales ingresados" id="btnVerAnimalesIngresados_usuario" class="btn btn-success m-3"/>
+        <input type="button" value="Agregar a animal" id="btnAgregarAnimal_usuario" class="btn btn-success m-3"/>
      </div>
 
+     <!--Lista de los ovinos del usuario-->
      <div id="Div_Contenedor_Tres" class="contenedor container py-3">
        <h2>Ver arboles</h2>
        <table class="table table-striped table-hover">
             <thead>
                 <tr >
-                    <th class="col-12">Nombre</th>
+                    <th>Nombre</th>
                     <th>Arbol</th>
                     <th>Ver</th>
                     <th>Modificar</th>
@@ -89,14 +123,16 @@
        </table>
      </div>
 
-     
-    <div id="Div_Contenedor_Cuatro" class="contenedor contenedores-grid container my-3 p-2">    
-        <select class="form-select" id="Select_Cabanias_Buscador" name="Select_Cabanias_Buscador">
-            <option value="Cabania1">Villa Olivar</option>
-            <option value="Cabania2">Don Amilcar</option>
-        </select>
-        <input type="text" placeholder="Nombre Animal" id="inpNombreAnimal" class="form-control"/>
-        <input type="button" value="Buscar Animal" class="btn btn-success">
+     <!--Buscador con la tabla-->
+    <div id="Div_Contenedor_Cuatro" class="contenedor container my-3 p-2"> 
+        <div class="contenedores-grid">
+            <select class="form-select" id="Select_Cabanias_Buscador" name="Select_Cabanias_Buscador">
+                <option value="Cabania1">Villa Olivar</option>
+                <option value="Cabania2">Don Amilcar</option>
+            </select>
+            <input type="text" placeholder="Nombre Animal" id="inpNombreAnimalAll" class="form-control"/>
+            <input type="button" value="Buscar Animal" class="btn btn-success" id="btnBuscarAnimalesAll">
+        </div>   
         <div>
             <table class="table table-striped table-hover">
                 <thead>
@@ -104,48 +140,27 @@
                         <th class="col-12">Nombre</th>
                         <th>Arbol</th>
                         <th>Ver</th>
-                        <th>Modificar</th>
-                        <th>Eliminar</th>
                     </tr>
                 </thead>
-                <tbody id="table_administrador">
-                    <tr>
-                        <td>Lari</td>
-                        <td><a href="#" class="table_link">&#127795;</a></td>
-                        <td><a href="#" class="table_link">🔎</a></td>
-                        <td><a href="#" class="table_link">&#128203;</a></td>
-                        <td><a href="#" class="table_link">🗑️</a></td>
-                    </tr>
-                    <tr>
-                        <td>Lewry</td>
-                        <td><a href="#" class="table_link">&#127795;</a></td>
-                        <td><a href="#" class="table_link">🔎</a></td>
-                        <td><a href="#" class="table_link">&#128203;</a></td>
-                        <td><a href="#" class="table_link">🗑️</a></td>
-                    </tr>
-                    <tr>
-                        <td>Lala</td>
-                        <td><a href="#" class="table_link">&#127795;</a></td>
-                        <td><a href="#" class="table_link">🔎</a></td>
-                        <td><a href="#" class="table_link">&#128203;</a></td>
-                        <td><a href="#" class="table_link">🗑️</a></td>
-                    </tr>
+                <tbody id="table_cliente">
+                   
                 </tbody>
            </table>
         </div>
     </div>
 
+    <!--Ver Detalles-->
     <div id="Div_Contenedor_Cinco" class="contenedor contenedores-grid container my-3 p-2"> 
         <div class="Div_Contenedor_Seis_Imagen py-2">
             <img src="./img/img1.png.jpg" alt="oveja" class="img-thumbnail img-fluid" id="img_Informacion">
         </div>
         <div id="Div_Contenedor_Seis_Informacion">
-            <h2>OVEJA PI 256</h2>
+            <h2 id="detalles_Nombre">OVEJA PI 256</h2>
             <p class="card-text">
-                <b>➽Cabania:</b> VILLA OLIVAR<br>
-                <b>➽Fecha de nacimiento:</b> 12/12/2012 <br>
-                <b>➽Descripcion destacada: </b> Campeona copa piston <br>
-                <b>➽Descripcion: </b>Es una Oveja que rompe bien los huevos y se come todo el pasto que hay en el campo , llena d epulgas y con alta baranda a guiso con ajo 
+                <b>➽Cabania:</b><span id="detalles_Cabania">VILLA OLIVAR</span><br>
+                <b>➽Fecha de nacimiento:</b><span id="detalles_Fecha"> 12/12/2012 </span><br>
+                <b>➽Descripcion destacada: </b> <span id="detalles_Descripcion_Corta">Campeona copa piston </span><br>
+                <b>➽Descripcion: </b><span id="detalles_Descripcion">Es una Oveja que rompe bien los huevos y se come todo el pasto que hay en el campo , llena d epulgas y con alta baranda a guiso con ajo </span>
 
             </p>
         </div>   
@@ -223,7 +238,8 @@
         <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2023 - Softuy Devs</div></div>
     </footer>
 
-    <script src="js/main.js"></script>
+    
     <script src="js/display.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

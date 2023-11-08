@@ -5,7 +5,8 @@ export const getOvinos = async (req,res) => {
         const [result] = await pool.query('SELECT * FROM Ovinos;');
 
         if (result.length <= 0) {
-            return res.status(404).json({ message: "No se encontraron Ovinos" });
+            return res.status(404).json({ message: "No se encontraron Ovinos" 
+            });
         }
       
         res.json(result);

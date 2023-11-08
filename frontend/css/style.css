@@ -11,6 +11,10 @@ header{
     background-color: rgb(230, 230, 249);
 }
 
+header h1{
+    cursor: pointer;
+}
+
 .TituloInicial{
     font-weight: bold;
 }
@@ -110,5 +114,22 @@ header{
     background-size: cover;
     background-position: center bottom;
     box-shadow: 2px 2px 10px blue;
+}
+
+.contenedor_volver * {
+    margin: 0; /* Anular el margin aplicado por * */
+}
+
+.contenedor_volver{
+    display: flex;
+    justify-content: flex-start;
+}
+
+#imgVolverAtras{
+    width: 1.5em;
+}
+
+.nav_item_Prin{
+    cursor: pointer;
 }
 
